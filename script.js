@@ -16,7 +16,7 @@ class Simon {
             round
         }
         this.looserSound = new Audio('./sounds/you-lose.mp3')
-        this.startplay = new Audio('./sounds/game-star.wav')
+        this.startplay = new Audio('./sounds/game-start.wav')
         this.winnerSound = new Audio('./sounds/victory-fanfare.mp3')
         this.errorSound = new Audio('./sounds/sounds_error.wav');
         this.buttonSounds = [
@@ -29,8 +29,10 @@ class Simon {
         ]
     }
     init() {
-        this.display.startButton.onclick = () => this.startGame();
-        this.startplay.play();
+        this.display.startButton.onclick = () => {
+            this.startGame();
+            this.startplay.play();
+        }
     }
 
     startGame() {
@@ -67,7 +69,7 @@ class Simon {
             this.buttonSounds[value].play();
             if (this.round === this.userPosition) {
                 this.updateRound(this.round + 1);
-                this.speed /= 1.02;
+                this.speed /= 1.10;
                 this.isGameOver();
             } else {
                 this.userPosition++;
@@ -120,7 +122,7 @@ class Simon {
         this.buttons.forEach(element => {
             element.classList.add('winner');
         });
-        this.updateRound('♠♣♦♥')
+        this.updateRound('WINNER!!!')
         this.winnerSound.play();
     }
 

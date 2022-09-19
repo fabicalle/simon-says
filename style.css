@@ -3,22 +3,28 @@ body {
     place-items: center;
     width: 100%;
     font-family: 'Mulish', sans-serif;
-    background-image: url("https://wallpapercave.com/wp/wp3210603.png");
-    background-size:cover;
+    background: url("https://assets.mixkit.co/videos/preview/mixkit-cyberpunk-style-stage-with-neon-grid-floor-30583-large.mp4") no-repeat;
+    background-size: cover;
    
 }
 
 .title{
   display: flex;
-  margin-bottom: 50px;
+  align-self:stretch;
+  float: left;
+  margin-bottom: 100px;
   background-color: #051b0e;
-  background-size:cover;
-  color: white;
-  border-radius: 5PX;
-  border-color: black;
-  border-style:groove;
-  font-size:xx-large;
-  font-weight: 450;
+  background:repeating-linear-gradient(to bottom, #0f0a1e, #0f0a1e 2px, #140e29 2px, #140e29 4px);;
+  height: 90px;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: 5px;
+  text-shadow: -2px 0 0 #fdff2a, -4px 0 0 #df4a42, 2px 0 0 #91fcfe, 4px 0 0 #4405fc;
+  animation: blink 1s steps(4, start) infinite;
 
 }
 .simon {
@@ -30,16 +36,26 @@ body {
 
 .buttonContainer {
     display: inline-grid;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-right: 0%;
     grid-gap: 10px;
     grid-template-columns: auto auto;
     transform: rotate(45deg);
 }
-
+.buttonContainer:hover, .buttonContainer:focus {
+    -webkit-box-shadow: 0px 0px 20px 15px #3cc6d8;
+    box-shadow: 0px 0px 30px 20px #3cc6d8;
+   
+}
 .square {
     border-radius: 5px;
     width: 150px;
     height: 150px;
     cursor: pointer;
+    -webkit-transition: .3s all ease-in;
+    transition: .3s all ease-in;
+    border: 2px solid transparent;
 }
 
 .square:active,
@@ -50,17 +66,36 @@ body {
 .red {
     background-color: #EE6352;
 }
-
+.red:hover, .red:focus {
+    -webkit-box-shadow: 0px 0px 20px 15px #EE6352;
+    box-shadow: 0px 0px 30px 20px #d15949;
+    background-color: #c72323;
+}
 .blue {
     background-color: #08B2E3;
+}
+.blue:hover, .blue:focus {
+    -webkit-box-shadow: 0px 0px 20px 15px #08B2E3;
+    box-shadow: 0px 0px 30px 20px #496dd1;
+    background-color: #182494;
 }
 
 .green {
     background-color: #57A773;
 }
+.green:hover, .green:focus {
+    -webkit-box-shadow: 0px 0px 20px 15px #57A773;
+    box-shadow: 0px 0px 30px 20px #49d192;
+    background-color: #147729;
+}
 
 .yellow {
     background-color: #FFDF64;
+}
+.yellow:hover, .yellow:focus {
+    -webkit-box-shadow: 0px 0px 20px 15px #FFDF64;
+    box-shadow: 0px 0px 30px 20px #b4d149;
+    background-color: #e7e428;
 }
 
 #startButton {
@@ -103,3 +138,18 @@ body {
         font-style: italic;
         -webkit-text-stroke: 1px black;
     }
+.backvideo{
+   position:fixed;
+   width: 100%;
+   right: 0;
+   bottom: 0;
+   z-index: -1;
+
+}
+@media (min-apect-ratio: 16/9){
+    .backvideo{
+        position:absolute;
+        width: auto;
+        height: auto;
+    }
+}
