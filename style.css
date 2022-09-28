@@ -119,6 +119,19 @@ body {
     padding: 5px;
     border-color: black;
     border-style: groove;
+    box-shadow: 0 9px #999;
+}
+#startButton:hover {
+    background-color: #181d18;
+    box-shadow: 0 9px rgb(88, 88, 88);
+    border-color: white;
+
+}
+
+#startButton:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 }
 
 #startButton:disabled{
@@ -156,18 +169,28 @@ body {
 @media (max-width: 500px){
     .backvideo{
         position:absolute;
-        width: 100%;
         height: 100%;
+        
     }
     .square {
         border-radius: 5px;
         border: #0f0a1e;
         width: 75px;
-        height: 75px;
+        height:75px;
         cursor: pointer;
         -webkit-transition: .3s all ease-in;
         transition: .3s all ease-in;
         border: 2px solid transparent;
+    }
+    body {
+        flex: auto;
+        flex-direction: row;
+        width: 100%;
+        height: 100%;
+        font-family: 'Mulish', sans-serif;
+        background: url("https://assets.mixkit.co/videos/preview/mixkit-cyberpunk-style-stage-with-neon-grid-floor-30583-large.mp4") no-repeat;
+        background-size:100%;
+       
     }
     
     
